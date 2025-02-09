@@ -3,8 +3,13 @@ import json
 import pandas as pd
 
 from src.reports import expenses_by_category, spending_by_weekday, spending_of_wor_or_wee_days
-from src.services import (best_cashback_categories, investment_bank, phone_number_search,
-                          search_for_transfers_to_individuals, simple_search)
+from src.services import (
+    best_cashback_categories,
+    investment_bank,
+    phone_number_search,
+    search_for_transfers_to_individuals,
+    simple_search,
+)
 from src.utils import read_xls
 from src.views import event_page, home_page
 

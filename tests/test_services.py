@@ -1,7 +1,12 @@
 import pandas as pd
 
-from src.services import (best_cashback_categories, investment_bank, phone_number_search,
-                          search_for_transfers_to_individuals, simple_search)
+from src.services import (
+    best_cashback_categories,
+    investment_bank,
+    phone_number_search,
+    search_for_transfers_to_individuals,
+    simple_search,
+)
 
 
 def test_best_cashback_categories(xls_file_two):

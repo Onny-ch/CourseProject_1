@@ -3,7 +3,6 @@ import datetime
 import json
 import logging
 import os
-from typing import Any
 
 import pandas as pd
 
@@ -22,7 +21,7 @@ def log_to_file(path: str = "data/reports.txt"):
     logger.info("Начало работы функции логирования в файл")
 
     def write_in_file(func):
-        def wrapper(*args: list[Any], **kwargs: dict[Any:Any]):
+        def wrapper(*args, **kwargs):
             try:
                 logger.info(f"Запуск функции {func.__name__}")
                 result = func(*args, **kwargs)

@@ -5,8 +5,16 @@ from unittest.mock import patch
 import pandas as pd
 import pytest
 
-from src.utils import (card_information, exchange_rate, expenses_calculator, greetings, income_calculator, read_xls,
-                       stock_price, top_five_by_trans_amount)
+from src.utils import (
+    card_information,
+    exchange_rate,
+    expenses_calculator,
+    greetings,
+    income_calculator,
+    read_xls,
+    stock_price,
+    top_five_by_trans_amount,
+)
 
 with open("user_settings.json", "r") as file:
     user_settings = json.load(file)

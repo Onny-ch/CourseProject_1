@@ -1,6 +1,8 @@
 import json
 import logging
 
+import pandas as pd
+
 from src.utils import (
     card_information,
     exchange_rate,
@@ -20,7 +22,7 @@ logger.addHandler(file_handler)
 
 
 # Функция для страницы "Главная"
-def home_page(file, user_data, date_time_string: str) -> str:  # готова
+def home_page(file: list[dict], user_data: dict[str, list[str]], date_time_string: str) -> str:  # готова
     """
     Принимает строку с датой и возвращает информацию в виде:
         1. Приветствие в соответствии с временем суток
@@ -67,7 +69,9 @@ def home_page(file, user_data, date_time_string: str) -> str:  # готова
     return json_home_page
 
 
-def event_page(file, user_data, actual_date_string: str, date_range: str = "M") -> str:
+def event_page(
+    file: pd.DataFrame, user_data: dict[str, list[str]], actual_date_string: str, date_range: str = "M"
+) -> str:
     """
     Принимает на вход дату и параметр диапазона, на выходе выдавая:
         1. Расходы
